@@ -58,6 +58,8 @@ class CinemaHallSerializer(serializers.Serializer):
             "seats_in_row",
             instance.seats_in_row
         )
+        instance.save()
+        return instance
 
 
 class MovieSerializer(serializers.Serializer):
