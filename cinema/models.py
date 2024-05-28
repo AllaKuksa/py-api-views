@@ -27,6 +27,9 @@ class CinemaHall(models.Model):
     rows = models.IntegerField()
     seats_in_row = models.IntegerField()
 
+    def __str__(self):
+        return f"{self.name} has {self.rows} rows and {self.seats_in_row} seats in row"
+
 
 class Movie(models.Model):
     title = models.CharField(max_length=255)
